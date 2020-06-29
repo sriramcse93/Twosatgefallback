@@ -1,0 +1,53 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - outlook_closed
+  - outlook_xml_error
+  - outlook_issue
+  - out_of_scope
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_outlook_issue:
+  - text: what type of issue facing in outlook
+  utter_outlook_closed:
+  - text: Please click this link to solve outlook close [issue] (http://anakage.in/brillio/Heal-It%20installler%20common.msi).
+  utter_outlook_xml_error:
+  - text: Please click this link to solve outlook xml [issue] (http://anakage.in/brillio/Heal-It%20installler%20common.msi).
+  utter_default:
+  - text: Sorry I didn't understand..
+  utter_ask_affirmation:
+  - text: Did you mean
+  utter_ask_rephrase:
+  - text: Please rephrase again
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+- utter_outlook_closed
+- utter_outlook_xml_error
+- utter_outlook_issue
